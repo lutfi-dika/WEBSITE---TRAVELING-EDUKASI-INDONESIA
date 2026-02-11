@@ -26,22 +26,22 @@ if (document.readyState === "loading") {
 
 function goCity(city) {
   const routes = {
-    Jakarta: "../Tempat/jakarta.html",
-    Bandung: "../Tempat/bandung.html",
-    Jogja: "../Tempat/jogja.html",
-    Malang: "../Tempat/malang.html",
-    Bali: "../Tempat/bali.html",
-    Makassar: "../Tempat/Makassar.html",
-    Manado: "../Tempat/Manado.html",
-    Balikpapan: "../Tempat/Balikpapan.html",
-    Pontianak: "../Tempat/Pontianak.html",
-    Medan: "../Tempat/Medan.html",
-    Palembang: "../Tempat/Palembang.html",
-    Padang: "../Tempat/Padang.html",
-    Jayapura: "../Tempat/Jayapura.html",
-    Mataram: "../Tempat/Mataram.html",
-    Kupang: "../Tempat/Kupang.html",
-    Ambon: "../Tempat/Ambon.html",
+    Jakarta: "jakarta.html",
+    Bandung: "bandung.html",
+    Jogja: "jogja.html",
+    Malang: "malang.html",
+    Bali: "bali.html",
+    Makassar: "Makassar.html",
+    Manado: "Manado.html",
+    Balikpapan: "Balikpapan.html",
+    Pontianak: "Pontianak.html",
+    Medan: "Medan.html",
+    Palembang: "Palembang.html",
+    Padang: "Padang.html",
+    Jayapura: "Jayapura.html",
+    Mataram: "Mataram.html",
+    Kupang: "Kupang.html",
+    Ambon: "Ambon.html",
   };
   window.location.href = routes[city];
 }

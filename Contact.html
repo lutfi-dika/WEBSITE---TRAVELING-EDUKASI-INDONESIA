@@ -417,8 +417,9 @@
 
             setTimeout(() => {
                 const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
                 const msg = document.getElementById('message').value;
-                const whatsappUrl = `https://api.whatsapp.com/send?phone=6281295431853&text=Halo, saya ${encodeURIComponent(name)}.%0A%0A${encodeURIComponent(msg)}`;
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=6281295431853&text=Halo, saya ${encodeURIComponent(name)}.%0AEmail: ${encodeURIComponent(email)}%0A%0A${encodeURIComponent(msg)}`;
                 
                 window.open(whatsappUrl, '_blank');
                 

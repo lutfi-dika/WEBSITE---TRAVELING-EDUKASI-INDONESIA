@@ -363,7 +363,7 @@ const kulinerData = [
           daerah: "Manado",
           tipe: "Minuman",  
           asal: "Manado",
-          img: "https://tse1.mm.bing.net/th/id/OIP.SYdIA8tycjQzql7O3wihcQHaDO?pid=Api&h=220&P=0",
+          img: "https://i.pinimg.com/originals/34/d0/d5/34d0d501af648f78b85b79468642905b.jpg",
           deskripsi:
             "Es Kacang Merah adalah minuman segar khas Manado yang terbuat dari kacang merah rebus, sirup, santan, dan es batu.",
         },

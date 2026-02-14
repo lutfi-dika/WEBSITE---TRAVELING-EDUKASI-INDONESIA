@@ -95,84 +95,90 @@
         </div>
     </div>
 
-    <nav x-data="{ mobileMenu: false, searchOpen: false }" 
-         class="fixed top-0 w-full z-50 backdrop-blur-md border-b transition-colors duration-300"
-         style="background-color: var(--nav-bg); border-color: var(--border-color);">
+    <nav
+  x-data="{ open: false }"
+  class="fixed top-0 w-full z-50 backdrop-blur-md transition-all duration-300 shadow-sm"
+  style="background-color: var(--nav-bg); border-bottom: 1px solid var(--border-color);"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16 relative">
       
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          
-          <div class="flex items-center space-x-8">
-            <div class="flex-shrink-0">
-              <a href="#" class="text-xl md:text-2xl font-bold italic tracking-tighter" style="color: var(--text-primary);">
-                Trav <span class="text-red-600">Edu</span>
-              </a>
-            </div>
+      <div class="flex-shrink-0 flex items-center">
+        <h2 class="text-2xl font-bold" style="color: var(--text-primary);">
+          Trav <span class="text-red-600">Edu</span>
+        </h2>
+      </div>
 
-            <div class="hidden md:flex items-center space-x-6">
-              <a href="index.html" class="text-sm font-semibold hover:text-red-600 transition" style="color: var(--text-primary);">Beranda</a>
-              <a href="index.html" class="text-sm font-semibold hover:text-red-600 transition" style="color: var(--text-primary);">Tentang</a>
-              <a href="Festival.html" class="text-sm font-semibold hover:text-red-600 transition" style="color: var(--text-primary);">Festival</a>
-              <a href="KulinerSection.html" class="text-sm font-semibold hover:text-red-600 transition" style="color: var(--text-primary);">Kuliner</a>
-            </div>
-          </div>
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="#home-section" class="font-medium transition hover:text-red-600" style="color: var(--text-primary);">Beranda</a>
+        <a href="#about-section" class="font-medium transition hover:text-red-600" style="color: var(--text-primary);">Tentang</a>
+        <a href="Festival.html" class="font-medium transition hover:text-red-600" style="color: var(--text-primary);">Festival</a>
+        <a href="KulinerSection.html" class="font-medium transition hover:text-red-600" style="color: var(--text-primary);">Kuliner</a>
+      </div>
 
-          <div class="flex items-center space-x-2 md:space-x-4">
-            
-            <div class="flex items-center space-x-1.5 bg-gray-900 text-white px-2 py-1 rounded-md border border-gray-700 scale-90 sm:scale-100">
+      <div class="flex items-center space-x-2 md:space-x-4">
+        
+        <button
+              id="search-btn"
+              class="p-2 transition focus:outline-none hover-red"
+              style="color: var(--text-primary);"
+            >
+              <i class="fas fa-search"></i>
+            </button>
+
+        <button
+              id="theme-toggle"
+              class="theme-toggle"
+              title="Toggle dark mode"
+              aria-label="Toggle dark mode"
+               style="display: flex; align-items: center;"
+            >
+              <i class="fas fa-sun" style="color: #fbbf24; font-size: 10px; margin: 9px;"></i>
+              <i class="fas fa-moon" style="color: #60a5fa; font-size: 10px;"></i>
+            </button>
+
+        <a href="Contact.html" class="hidden md:block bg-red-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-red-700 shadow-lg">
+          Contact
+        </a>
+       
+        <div class="flex items-center space-x-1.5 bg-gray-900 text-white px-2 py-1 rounded-md border border-gray-700 scale-90 sm:scale-100">
               <i class="fas fa-clock text-red-500 text-[10px]"></i>
               <div class="font-mono text-[11px] md:text-xs font-bold tabular-nums tracking-wider">
                 <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
               </div>
             </div>
 
-            <button @click="searchOpen = !searchOpen" class="p-2 hover:text-red-600 transition focus:outline-none" style="color: var(--text-primary);">
-              <i class="fas fa-search text-sm"></i>
-            </button>
-
-            <div id="theme-toggle" class="theme-toggle scale-90 sm:scale-100">
-              <i class="fas fa-sun text-[9px] text-yellow-500 absolute left-1.5"></i>
-              <i class="fas fa-moon text-[9px] text-blue-300 absolute right-1.5"></i>
-            </div>
-
-            <button @click="mobileMenu = !mobileMenu" class="md:hidden flex flex-col space-y-1.5 p-2 ml-1 focus:outline-none">
-              <span class="hamburger-line" :class="mobileMenu ? 'rotate-45 translate-y-2' : ''"></span>
-              <span class="hamburger-line" :class="mobileMenu ? 'opacity-0' : ''"></span>
-              <span class="hamburger-line" :class="mobileMenu ? '-rotate-45 -translate-y-1.5' : ''"></span>
-            </button>
-
-            <a href="Contact.html" class="hidden md:block bg-red-600 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-700 shadow-lg transition text-xs uppercase tracking-wider">
-              Contact
-            </a>
-          </div>
-        </div>
+        <button
+          @click="open = !open"
+          class="md:hidden p-2 rounded-md focus:outline-none"
+          style="color: var(--text-primary);"
+        >
+          <i class="fas" :class="open ? 'fa-times text-2xl' : 'fa-bars text-xl'"></i>
+        </button>
       </div>
+    </div>
+  </div>
 
-      <div x-show="searchOpen" x-cloak 
-           x-transition:enter="transition ease-out duration-300"
-           x-transition:enter-start="-translate-y-full opacity-0"
-           x-transition:enter-end="translate-y-0 opacity-100"
-           class="absolute top-16 left-0 w-full p-4 border-b z-40 shadow-xl"
-           style="background-color: var(--bg-secondary); border-color: var(--border-color);">
-        <div class="max-w-3xl mx-auto flex items-center bg-white dark:bg-zinc-900 rounded-xl px-4 py-3 border dark:border-zinc-800 shadow-inner">
-          <i class="fas fa-search text-red-600 mr-3"></i>
-          <input type="text" placeholder="Cari kota atau destinasi..." class="w-full bg-transparent outline-none text-sm md:text-base" style="color: var(--text-primary);">
-          <button @click="searchOpen = false" class="text-gray-400 hover:text-red-600 ml-2"><i class="fas fa-times"></i></button>
-        </div>  
-      </div>
+  <div
+    x-show="open"
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 -translate-y-4"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-cloak
+    @click.outside="open = false"
+    class="md:hidden flex flex-col space-y-2 px-6 py-4 border-t shadow-inner bg-white"
+    style="background-color: var(--nav-bg);"
+  >
+    <a href="#home-section" class="block py-2 font-medium" style="color: var(--text-primary);">Beranda</a>
+    <a href="#about-section" class="block py-2 font-medium" style="color: var(--text-primary);">Tentang</a>
+    <a href="Festival.html" class="block py-2 font-medium" style="color: var(--text-primary);">Festival</a>
+    <a href="KulinerSection.html" class="block py-2 font-medium" style="color: var(--text-primary);">Kuliner</a>
+    <hr class="border-gray-200 my-2">
+        
+    <a href="Contact.html" class="block py-2 font-bold text-red-600">Contact Us</a>
+  </div>
+</nav>
 
-      <div x-show="mobileMenu" x-cloak @click.away="mobileMenu = false" 
-           class="md:hidden border-t overflow-hidden" 
-           style="background-color: var(--nav-bg); border-color: var(--border-color);">
-        <div class="px-6 py-8 flex flex-col space-y-5">
-          <a href="index.html" class="text-lg font-bold" style="color: var(--text-primary);">Beranda</a>
-          <a href="index.html" class="text-lg font-bold" style="color: var(--text-primary);">Tentang</a>
-          <a href="Festival.html" class="text-lg font-bold" style="color: var(--text-primary);">Festival</a>
-          <a href="KulinerSection.html" class="text-lg font-bold" style="color: var(--text-primary);">Kuliner</a>
-          <a href="Contact.html" class="bg-red-600 text-white text-center py-4 rounded-xl font-bold uppercase tracking-widest shadow-lg">Hubungi Kami</a>
-        </div>
-      </div>
-    </nav>
 
     <div
       id="search-container"

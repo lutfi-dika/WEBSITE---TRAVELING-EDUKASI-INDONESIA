@@ -615,7 +615,7 @@ const cityData = {
         festivals: [
             {
                 name: "Sekaten & Grebeg",
-                img: "https://helloindonesia.id/wp-content/uploads/2025/09/Sekaten-Yogyakarta-1536x838.jpg",
+                img: "https://visitingjogja.jogjaprov.go.id/wp-content/uploads/2016/11/Grebeg-Maulud-1.jpg",
                 article: `
     <div class="relative">
         <img src="https://helloindonesia.id/wp-content/uploads/2025/09/Sekaten-Yogyakarta-1536x838.jpg" class="w-full h-full object-cover">
@@ -1531,15 +1531,15 @@ const cityData = {
         ],
     }, 
     Medan: {
-        bg: "https://unsplash.com/id/foto/sebuah-menara-yang-sangat-tinggi-duduk-di-tengah-hutan-hN-_EwmB4sY",
+        bg: "https://s.yimg.com/zb/imgv1/f1625bb1-51f6-3e0d-a250-af71bb4a11cb/t_500x300",
         desc: "Kota terbesar di Sumatera dengan festival budaya yang kaya dan beragam.",
         festivals: [
             {
                 name: "Masjid Raya Al-Mashun",
-                img: "https://bpmpp.uma.ac.id/wp-content/uploads/2021/08/mengunjungi-masjid-al-mashun-medan-cantik-nan-megah-peninggalan-kesultanan-deli.jpg",
+                img: "https://s.yimg.com/zb/imgv1/f1625bb1-51f6-3e0d-a250-af71bb4a11cb/t_500x300",
                 article: `
     <div class="relative">
-        <img src="https://bpmpp.uma.ac.id/wp-content/uploads/2021/08/mengunjungi-masjid-al-mashun-medan-cantik-nan-megah-peninggalan-kesultanan-deli.jpg" class="w-full h-full object-cover">
+        <img src="https://s.yimg.com/zb/imgv1/f1625bb1-51f6-3e0d-a250-af71bb4a11cb/t_500x300" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-12">
             <span class="bg-red-600 text-white px-4 py-1 text-xs font-bold w-fit mb-4 uppercase tracking-widest">Tempat Ibadah</span>
             <h1 class="text-5xl font-black mb-2 uppercase italic tracking-tighter">Masjid Raya Al-Mashun</h1>

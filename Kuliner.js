@@ -332,7 +332,7 @@ const kulinerData = [
           daerah: "Makassar",
           tipe: "Minuman",
           asal: "Makassar",
-          img: "https://tse1.mm.bing.net/th/id/OIP.YrhBzWQBBIqySjb9m6UhkQHaE8?pid=Api&h=220&P=0",
+          img: "https://travellingindonesia.com/wp-content/uploads/2022/06/Es-Pisang-Ijo-khas-Makassar-Dok.-Istimewa.jpg",
           deskripsi:
             "Es Pisang Ijo adalah minuman segar khas Makassar yang terbuat dari pisang yang dibungkus dengan adonan tepung hijau, disajikan dengan sirup, santan, dan es batu.",  
         },
